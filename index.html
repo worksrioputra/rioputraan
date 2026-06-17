@@ -1020,67 +1020,6 @@ footer p { font-size: 0.82rem; color: var(--muted); }
   .slider-arrow { width: 36px; height: 36px; }
   .slide-item { width: 220px; }
 }
-
-/* ── LANG TOGGLE ── */
-.lang-toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  padding: 3px;
-  margin-left: 0.5rem;
-}
-
-.lang-btn {
-  border: none;
-  background: transparent;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  padding: 0.3rem 0.65rem;
-  border-radius: 100px;
-  cursor: pointer;
-  color: var(--muted);
-  transition: all 0.15s;
-}
-
-.lang-btn.active {
-  background: var(--accent);
-  color: #fff;
-}
-
-.mobile-lang-toggle {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.75rem 0.5rem 0.25rem;
-  margin-top: 0.25rem;
-}
-
-.mobile-lang-toggle button {
-  flex: 1;
-  border: 1.5px solid var(--border);
-  background: var(--surface2);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 0.55rem;
-  border-radius: 8px;
-  cursor: pointer;
-  color: var(--muted);
-}
-
-.mobile-lang-toggle button.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
-}
-
-@media (max-width: 900px) {
-  .lang-toggle { display: none; }
-}
 </style>
 </head>
 <body>
@@ -1089,19 +1028,13 @@ footer p { font-size: 0.82rem; color: var(--muted); }
 <nav>
   <a href="#" class="nav-logo">WORKSRIOPUTRA</a>
   <ul class="nav-links">
-    <li><a href="#about" data-i18n="nav_about">Tentang</a></li>
-    <li><a href="#services" data-i18n="nav_services">Layanan</a></li>
-    <li><a href="#portfolio" data-i18n="nav_portfolio">Portofolio</a></li>
-    <li><a href="#gallery" data-i18n="nav_gallery">Galeri</a></li>
-    <li><a href="#process" data-i18n="nav_process">Cara Kerja</a></li>
-    <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
-    <li><a href="https://wa.me/6281805670261" class="nav-cta" target="_blank" data-i18n="nav_cta">Konsultasi Gratis</a></li>
-    <li>
-      <div class="lang-toggle">
-        <button class="lang-btn active" id="langBtnID" onclick="setLang('id')">ID</button>
-        <button class="lang-btn" id="langBtnEN" onclick="setLang('en')">EN</button>
-      </div>
-    </li>
+    <li><a href="#about">Tentang</a></li>
+    <li><a href="#services">Layanan</a></li>
+    <li><a href="#portfolio">Portofolio</a></li>
+    <li><a href="#gallery">Galeri</a></li>
+    <li><a href="#process">Cara Kerja</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="https://wa.me/6281805670261" class="nav-cta" target="_blank">Konsultasi Gratis</a></li>
   </ul>
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -1109,17 +1042,13 @@ footer p { font-size: 0.82rem; color: var(--muted); }
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="closeMenu()" data-i18n="nav_about">Tentang</a>
-  <a href="#services" onclick="closeMenu()" data-i18n="nav_services">Layanan</a>
-  <a href="#portfolio" onclick="closeMenu()" data-i18n="nav_portfolio">Portofolio</a>
-  <a href="#gallery" onclick="closeMenu()" data-i18n="nav_gallery">Galeri</a>
-  <a href="#process" onclick="closeMenu()" data-i18n="nav_process">Cara Kerja</a>
-  <a href="#faq" onclick="closeMenu()" data-i18n="nav_faq">FAQ</a>
-  <a href="https://wa.me/6281805670261" target="_blank" style="color: var(--accent); font-weight: 700;" data-i18n="nav_cta_wa">💬 Konsultasi Gratis via WhatsApp</a>
-  <div class="mobile-lang-toggle">
-    <button class="active" id="mLangBtnID" onclick="setLang('id')">🇮🇩 Indonesia</button>
-    <button id="mLangBtnEN" onclick="setLang('en')">🇬🇧 English</button>
-  </div>
+  <a href="#about" onclick="closeMenu()">Tentang</a>
+  <a href="#services" onclick="closeMenu()">Layanan</a>
+  <a href="#portfolio" onclick="closeMenu()">Portofolio</a>
+  <a href="#gallery" onclick="closeMenu()">Galeri</a>
+  <a href="#process" onclick="closeMenu()">Cara Kerja</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="https://wa.me/6281805670261" target="_blank" style="color: var(--accent); font-weight: 700;">💬 Konsultasi Gratis via WhatsApp</a>
 </div>
 
 <!-- HERO -->
@@ -1129,38 +1058,38 @@ footer p { font-size: 0.82rem; color: var(--muted); }
     <div>
       <div class="hero-badge fade-up">
         <div class="hero-badge-dot"></div>
-        <span data-i18n="hero_badge">Tersedia untuk Proyek Baru</span>
+        Website Application Expert
       </div>
-      <h1 class="fade-up" data-i18n="hero_title">
+      <h1 class="fade-up">
         Sistem Digital<br>
         <span class="hl">Profesional</span> untuk<br>
         Bisnis & Instansi
       </h1>
-      <p class="hero-desc fade-up" data-i18n="hero_desc">
+      <p class="hero-desc fade-up">
         Spesialis Google Apps Script, Web App, dan Dashboard. Mengubah proses manual dan spreadsheet menjadi sistem informasi yang bekerja otomatis — tanpa biaya server bulanan.
       </p>
       <div class="hero-actions fade-up">
         <a href="https://wa.me/6281805670261" class="btn-primary" target="_blank">
           <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          <span data-i18n="hero_btn_consult">Konsultasi Gratis</span>
+          Konsultasi Gratis
         </a>
         <a href="#portfolio" class="btn-outline">
-          <span data-i18n="hero_btn_portfolio">Lihat Portofolio</span>
+          Lihat Portofolio
           <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </div>
       <div class="hero-stats fade-up">
         <div>
           <div class="stat-num">10+</div>
-          <div class="stat-label" data-i18n="hero_stat1">Tahun pengalaman</div>
+          <div class="stat-label">Tahun pengalaman</div>
         </div>
         <div>
           <div class="stat-num">30+</div>
-          <div class="stat-label" data-i18n="hero_stat2">Proyek selesai</div>
+          <div class="stat-label">Proyek selesai</div>
         </div>
         <div>
           <div class="stat-num">100%</div>
-          <div class="stat-label" data-i18n="hero_stat3">Klien puas</div>
+          <div class="stat-label">Klien puas</div>
         </div>
       </div>
     </div>
@@ -1171,7 +1100,7 @@ footer p { font-size: 0.82rem; color: var(--muted); }
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
       </div>
       <div class="profile-name">Rio Putra Adi Nugroho</div>
-      <div class="profile-role" data-i18n="hero_profile_role">Business Systems Developer · 10+ Tahun</div>
+      <div class="profile-role">Business Systems Developer · 10+ Tahun</div>
       <div class="profile-tags">
         <span class="ptag">Google Apps Script</span>
         <span class="ptag">AppSheet</span>
@@ -1218,25 +1147,25 @@ footer p { font-size: 0.82rem; color: var(--muted); }
 <!-- SERVICES -->
 <section class="section section-alt" id="services">
   <div class="container">
-    <div class="sec-eyebrow fade-up" data-i18n="svc_eyebrow">Layanan</div>
-    <div class="sec-title fade-up" data-i18n="svc_title">Apa yang Bisa Saya Bangun</div>
-    <p class="sec-sub fade-up" data-i18n="svc_sub">Tiga kategori utama — semua dibangun dari kebutuhan nyata, bukan template generik.</p>
+    <div class="sec-eyebrow fade-up">Layanan</div>
+    <div class="sec-title fade-up">Apa yang Bisa Saya Bangun</div>
+    <p class="sec-sub fade-up">Tiga kategori utama — semua dibangun dari kebutuhan nyata, bukan template generik.</p>
 
     <div class="services-grid">
       <div class="svc-card fade-up">
         <div class="svc-icon">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
-        <div class="svc-name" data-i18n="svc1_name">Web App & Sistem Informasi</div>
-        <p class="svc-desc" data-i18n="svc1_desc">Custom web application berbasis Google Apps Script. Multi-role, dashboard real-time, generate PDF otomatis — tanpa biaya server bulanan.</p>
-        <div class="svc-price" data-i18n="svc1_price">Mulai Rp 1.500.000</div>
+        <div class="svc-name">Web App & Sistem Informasi</div>
+        <p class="svc-desc">Custom web application berbasis Google Apps Script. Multi-role, dashboard real-time, generate PDF otomatis — tanpa biaya server bulanan.</p>
+        <div class="svc-price">Mulai Rp 1.500.000</div>
         <ul class="svc-features">
-          <li data-i18n="svc1_f1">Form input dengan validasi otomatis</li>
-          <li data-i18n="svc1_f2">Login multi-user (Admin/Operator/User)</li>
-          <li data-i18n="svc1_f3">Dashboard monitoring & Chart.js</li>
-          <li data-i18n="svc1_f4">Approval workflow & email notifikasi</li>
-          <li data-i18n="svc1_f5">Peta interaktif (Leaflet.js)</li>
-          <li data-i18n="svc1_f6">Generate dokumen PDF otomatis</li>
+          <li>Form input dengan validasi otomatis</li>
+          <li>Login multi-user (Admin/Operator/User)</li>
+          <li>Dashboard monitoring & Chart.js</li>
+          <li>Approval workflow & email notifikasi</li>
+          <li>Peta interaktif (Leaflet.js)</li>
+          <li>Generate dokumen PDF otomatis</li>
         </ul>
       </div>
 
@@ -1244,16 +1173,16 @@ footer p { font-size: 0.82rem; color: var(--muted); }
         <div class="svc-icon">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         </div>
-        <div class="svc-name" data-i18n="svc2_name">Dashboard Excel & Google Sheets</div>
-        <p class="svc-desc" data-i18n="svc2_desc">Transformasi spreadsheet menjadi sistem penjualan digital lengkap dengan manajemen stok, invoice PDF, dan laporan real-time.</p>
-        <div class="svc-price" data-i18n="svc2_price">Mulai Rp 1.200.000</div>
+        <div class="svc-name">Dashboard Excel & Google Sheets</div>
+        <p class="svc-desc">Transformasi spreadsheet menjadi sistem penjualan digital lengkap dengan manajemen stok, invoice PDF, dan laporan real-time.</p>
+        <div class="svc-price">Mulai Rp 1.200.000</div>
         <ul class="svc-features">
-          <li data-i18n="svc2_f1">Sistem penjualan digital siap pakai</li>
-          <li data-i18n="svc2_f2">Manajemen stok & mutasi barang</li>
-          <li data-i18n="svc2_f3">Invoice & nota PDF otomatis</li>
-          <li data-i18n="svc2_f4">Dashboard laporan bisnis real-time</li>
-          <li data-i18n="svc2_f5">Form order online (HP & Laptop)</li>
-          <li data-i18n="svc2_f6">Notifikasi email otomatis</li>
+          <li>Sistem penjualan digital siap pakai</li>
+          <li>Manajemen stok & mutasi barang</li>
+          <li>Invoice & nota PDF otomatis</li>
+          <li>Dashboard laporan bisnis real-time</li>
+          <li>Form order online (HP & Laptop)</li>
+          <li>Notifikasi email otomatis</li>
         </ul>
       </div>
 
@@ -1261,16 +1190,16 @@ footer p { font-size: 0.82rem; color: var(--muted); }
         <div class="svc-icon">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-        <div class="svc-name" data-i18n="svc3_name">Website WordPress UMKM</div>
-        <p class="svc-desc" data-i18n="svc3_desc">Website profesional untuk bisnis UMKM — company profile, katalog, landing page, hingga toko online WooCommerce. SEO-ready & mobile friendly.</p>
-        <div class="svc-price" data-i18n="svc3_price">Mulai Rp 1.500.000</div>
+        <div class="svc-name">Website WordPress UMKM</div>
+        <p class="svc-desc">Website profesional untuk bisnis UMKM — company profile, katalog, landing page, hingga toko online WooCommerce. SEO-ready & mobile friendly.</p>
+        <div class="svc-price">Mulai Rp 1.500.000</div>
         <ul class="svc-features">
-          <li data-i18n="svc3_f1">Tampilan responsif (desktop & mobile)</li>
-          <li data-i18n="svc3_f2">Optimasi SEO dasar (Google Ready)</li>
-          <li data-i18n="svc3_f3">Integrasi WhatsApp & Google Maps</li>
-          <li data-i18n="svc3_f4">Toko online WooCommerce</li>
-          <li data-i18n="svc3_f5">Integrasi marketplace Shopee/Tokopedia</li>
-          <li data-i18n="svc3_f6">Konten mudah dikelola via WordPress</li>
+          <li>Tampilan responsif (desktop & mobile)</li>
+          <li>Optimasi SEO dasar (Google Ready)</li>
+          <li>Integrasi WhatsApp & Google Maps</li>
+          <li>Toko online WooCommerce</li>
+          <li>Integrasi marketplace Shopee/Tokopedia</li>
+          <li>Konten mudah dikelola via WordPress</li>
         </ul>
       </div>
     </div>
@@ -1280,9 +1209,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
 <!-- PORTFOLIO -->
 <section class="section" id="portfolio">
   <div class="container">
-    <div class="sec-eyebrow fade-up" data-i18n="port_eyebrow">Portofolio</div>
-    <div class="sec-title fade-up" data-i18n="port_title">Proyek yang Pernah Dibangun</div>
-    <p class="sec-sub fade-up" data-i18n="port_sub">Sistem nyata yang digunakan oleh instansi pemerintah dan bisnis untuk operasional sehari-hari.</p>
+    <div class="sec-eyebrow fade-up">Portofolio</div>
+    <div class="sec-title fade-up">Proyek yang Pernah Dibangun</div>
+    <p class="sec-sub fade-up">Sistem nyata yang digunakan oleh instansi pemerintah dan bisnis untuk operasional sehari-hari.</p>
 
     <div class="portfolio-grid" style="margin-top: 2.5rem;">
 
@@ -1292,9 +1221,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/perizinan-detail.jpg" alt="Wildlife Rescue Unit — Sistem Informasi Satwa Liar" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p1_badge">🔥 Terbaru · Instansi Pemerintah</div>
-          <div class="port-title" data-i18n="p1_title">Wildlife Rescue Unit — Sistem Informasi Satwa Liar</div>
-          <p class="port-desc" data-i18n="p1_desc">Sistem informasi pengelolaan satwa liar berbasis Google Apps Script (SPA). Mencakup multi-role RBAC, generasi dokumen hukum (BAST & STP) otomatis, peta sebaran interaktif (Leaflet.js), dan Google Sheets sebagai database utama. Dibangun untuk Balai Besar KSDA Jawa Barat.</p>
+          <div class="port-badge">🔥 Terbaru · Instansi Pemerintah</div>
+          <div class="port-title">Wildlife Rescue Unit — Sistem Informasi Satwa Liar</div>
+          <p class="port-desc">Sistem informasi pengelolaan satwa liar berbasis Google Apps Script (SPA). Mencakup multi-role RBAC, generasi dokumen hukum (BAST & STP) otomatis, peta sebaran interaktif (Leaflet.js), dan Google Sheets sebagai database utama. Dibangun untuk Balai Besar KSDA Jawa Barat.</p>
           <div class="port-tech">
             <span class="ttag">Google Apps Script</span>
             <span class="ttag">Google Sheets</span>
@@ -1312,9 +1241,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/perizinan-online.jpg" alt="Sistem Perizinan Online — Dashboard Monitoring" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p2_badge">Sistem Approval</div>
-          <div class="port-title" data-i18n="p2_title">Sistem Perizinan Online — Dashboard Monitoring</div>
-          <p class="port-desc" data-i18n="p2_desc">Dashboard pengajuan, approval workflow berlapis, dan tracking status perizinan secara real-time.</p>
+          <div class="port-badge">Sistem Approval</div>
+          <div class="port-title">Sistem Perizinan Online — Dashboard Monitoring</div>
+          <p class="port-desc">Dashboard pengajuan, approval workflow berlapis, dan tracking status perizinan secara real-time.</p>
           <div class="port-tech">
             <span class="ttag">Google Apps Script</span>
             <span class="ttag">Dashboard</span>
@@ -1329,9 +1258,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/approval-digital.jpg" alt="e-SIMAKSI — Sistem Pengajuan & Approval Digital" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p3_badge">Instansi Pemerintah</div>
-          <div class="port-title" data-i18n="p3_title">e-SIMAKSI — Sistem Informasi Manajemen Perizinan</div>
-          <p class="port-desc" data-i18n="p3_desc">Sistem digital perizinan kawasan konservasi. Alur persetujuan digital, verifikasi dokumen, dan arsip terpusat.</p>
+          <div class="port-badge">Instansi Pemerintah</div>
+          <div class="port-title">e-SIMAKSI — Sistem Informasi Manajemen Perizinan</div>
+          <p class="port-desc">Sistem digital perizinan kawasan konservasi. Alur persetujuan digital, verifikasi dokumen, dan arsip terpusat.</p>
           <div class="port-tech">
             <span class="ttag">Google Apps Script</span>
             <span class="ttag">AppSheet</span>
@@ -1346,9 +1275,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/salespro.jpg" alt="SalesPro — Sistem Penjualan Digital UMKM" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p4_badge">Sistem Penjualan</div>
-          <div class="port-title" data-i18n="p4_title">SalesPro — Sistem Penjualan Digital UMKM</div>
-          <p class="port-desc" data-i18n="p4_desc">Manajemen order, stok, invoice PDF otomatis, dan dashboard penjualan real-time untuk bisnis UMKM.</p>
+          <div class="port-badge">Sistem Penjualan</div>
+          <div class="port-title">SalesPro — Sistem Penjualan Digital UMKM</div>
+          <p class="port-desc">Manajemen order, stok, invoice PDF otomatis, dan dashboard penjualan real-time untuk bisnis UMKM.</p>
           <div class="port-tech">
             <span class="ttag">Google Sheets</span>
             <span class="ttag">PDF Automation</span>
@@ -1363,9 +1292,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/survey-feedback.jpg" alt="Survey & Feedback System — Kepuasan Layanan" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p5_badge">Layanan Publik</div>
-          <div class="port-title" data-i18n="p5_title">Survey & Feedback System — Kepuasan Layanan</div>
-          <p class="port-desc" data-i18n="p5_desc">Platform survei kepuasan pelanggan dengan CSAT/NPS analytics, word cloud, dan dashboard real-time.</p>
+          <div class="port-badge">Layanan Publik</div>
+          <div class="port-title">Survey & Feedback System — Kepuasan Layanan</div>
+          <p class="port-desc">Platform survei kepuasan pelanggan dengan CSAT/NPS analytics, word cloud, dan dashboard real-time.</p>
           <div class="port-tech">
             <span class="ttag">Google Apps Script</span>
             <span class="ttag">Chart.js</span>
@@ -1380,9 +1309,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/executive-dashboard.jpg" alt="Executive Monitoring Dashboard — KPI & Peta Indonesia" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p6_badge">Monitoring</div>
-          <div class="port-title" data-i18n="p6_title">Executive Monitoring Dashboard — KPI & Peta Indonesia</div>
-          <p class="port-desc" data-i18n="p6_desc">Dashboard eksekutif dengan peta monitoring wilayah Indonesia, KPI analytics, dan laporan lintas region.</p>
+          <div class="port-badge">Monitoring</div>
+          <div class="port-title">Executive Monitoring Dashboard — KPI & Peta Indonesia</div>
+          <p class="port-desc">Dashboard eksekutif dengan peta monitoring wilayah Indonesia, KPI analytics, dan laporan lintas region.</p>
           <div class="port-tech">
             <span class="ttag">Leaflet.js</span>
             <span class="ttag">Looker Studio</span>
@@ -1397,9 +1326,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/inventaris.jpg" alt="Sistem Inventaris & Stok Barang" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p7_badge">Sistem Inventaris</div>
-          <div class="port-title" data-i18n="p7_title">Inventory Management System & Stock Monitoring</div>
-          <p class="port-desc" data-i18n="p7_desc">Manajemen stok terintegrasi untuk UMKM. Mutasi barang, alert stok minimum, laporan real-time, dan invoice PDF.</p>
+          <div class="port-badge">Sistem Inventaris</div>
+          <div class="port-title">Inventory Management System & Stock Monitoring</div>
+          <p class="port-desc">Manajemen stok terintegrasi untuk UMKM. Mutasi barang, alert stok minimum, laporan real-time, dan invoice PDF.</p>
           <div class="port-tech">
             <span class="ttag">Google Apps Script</span>
             <span class="ttag">Chart.js</span>
@@ -1414,9 +1343,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/sheets-to-webapp.jpg" alt="Ubah Google Sheets Menjadi Web App Profesional" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p8_badge">Sistem Informasi</div>
-          <div class="port-title" data-i18n="p8_title">Ubah Google Sheets Menjadi Web App Profesional</div>
-          <p class="port-desc" data-i18n="p8_desc">Transformasi spreadsheet menjadi sistem informasi terintegrasi dengan login multi-user, peta sebaran data, dan laporan otomatis.</p>
+          <div class="port-badge">Sistem Informasi</div>
+          <div class="port-title">Ubah Google Sheets Menjadi Web App Profesional</div>
+          <p class="port-desc">Transformasi spreadsheet menjadi sistem informasi terintegrasi dengan login multi-user, peta sebaran data, dan laporan otomatis.</p>
           <div class="port-tech">
             <span class="ttag">Google Sheets</span>
             <span class="ttag">Leaflet.js</span>
@@ -1431,9 +1360,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/sistem-informasi-dashboard.jpg" alt="Sistem Informasi & Dashboard Bisnis" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p9_badge">Dashboard Bisnis</div>
-          <div class="port-title" data-i18n="p9_title">Sistem Informasi & Dashboard Bisnis Terintegrasi</div>
-          <p class="port-desc" data-i18n="p9_desc">Digitalisasi data, monitoring kinerja, dan laporan otomatis dalam satu sistem — menggantikan rekap manual lintas file Excel & WhatsApp.</p>
+          <div class="port-badge">Dashboard Bisnis</div>
+          <div class="port-title">Sistem Informasi & Dashboard Bisnis Terintegrasi</div>
+          <p class="port-desc">Digitalisasi data, monitoring kinerja, dan laporan otomatis dalam satu sistem — menggantikan rekap manual lintas file Excel & WhatsApp.</p>
           <div class="port-tech">
             <span class="ttag">Google Apps Script</span>
             <span class="ttag">AppSheet</span>
@@ -1448,9 +1377,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/excel-webapp-1.jpg" alt="Ubah Excel Menjadi Web App" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p10_badge">Sistem Penjualan</div>
-          <div class="port-title" data-i18n="p10_title">Ubah Excel Menjadi Web App — Solusi Digital UMKM</div>
-          <p class="port-desc" data-i18n="p10_desc">Migrasi pencatatan order, stok, dan laporan dari Excel manual ke dashboard otomatis yang akurat dan real-time.</p>
+          <div class="port-badge">Sistem Penjualan</div>
+          <div class="port-title">Ubah Excel Menjadi Web App — Solusi Digital UMKM</div>
+          <p class="port-desc">Migrasi pencatatan order, stok, dan laporan dari Excel manual ke dashboard otomatis yang akurat dan real-time.</p>
           <div class="port-tech">
             <span class="ttag">Google Sheets</span>
             <span class="ttag">AppSheet</span>
@@ -1465,9 +1394,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/company-profile.jpg" alt="Website Company Profile Profesional" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p11_badge">Website UMKM</div>
-          <div class="port-title" data-i18n="p11_title">Website Company Profile — Konveksi & Manufaktur</div>
-          <p class="port-desc" data-i18n="p11_desc">Website company profile dengan integrasi WhatsApp dan Google Maps, meningkatkan kredibilitas dan kepercayaan pelanggan.</p>
+          <div class="port-badge">Website UMKM</div>
+          <div class="port-title">Website Company Profile — Konveksi & Manufaktur</div>
+          <p class="port-desc">Website company profile dengan integrasi WhatsApp dan Google Maps, meningkatkan kredibilitas dan kepercayaan pelanggan.</p>
           <div class="port-tech">
             <span class="ttag">WordPress</span>
             <span class="ttag">SEO Friendly</span>
@@ -1482,9 +1411,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/restoran-kuliner.jpg" alt="Website Restoran & Kuliner" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p12_badge">Website UMKM</div>
-          <div class="port-title" data-i18n="p12_title">Website Restoran & Kuliner — Menu Digital</div>
-          <p class="port-desc" data-i18n="p12_desc">Website restoran dengan menu digital, reservasi online, integrasi Google Maps, dan pemesanan via WhatsApp.</p>
+          <div class="port-badge">Website UMKM</div>
+          <div class="port-title">Website Restoran & Kuliner — Menu Digital</div>
+          <p class="port-desc">Website restoran dengan menu digital, reservasi online, integrasi Google Maps, dan pemesanan via WhatsApp.</p>
           <div class="port-tech">
             <span class="ttag">WordPress</span>
             <span class="ttag">Google Maps</span>
@@ -1499,9 +1428,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/toko-online.jpg" alt="Toko Online Profesional — WooCommerce" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p13_badge">E-Commerce</div>
-          <div class="port-title" data-i18n="p13_title">Toko Online Profesional — WooCommerce</div>
-          <p class="port-desc" data-i18n="p13_desc">Toko online mandiri tanpa bergantung marketplace. Checkout online, manajemen produk, dan kontrol penuh atas brand & data pelanggan.</p>
+          <div class="port-badge">E-Commerce</div>
+          <div class="port-title">Toko Online Profesional — WooCommerce</div>
+          <p class="port-desc">Toko online mandiri tanpa bergantung marketplace. Checkout online, manajemen produk, dan kontrol penuh atas brand & data pelanggan.</p>
           <div class="port-tech">
             <span class="ttag">WooCommerce</span>
             <span class="ttag">WordPress</span>
@@ -1516,9 +1445,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/umkm-naik-kelas.jpg" alt="UMKM Naik Kelas dengan Website Profesional" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p14_badge">Website Fashion</div>
-          <div class="port-title" data-i18n="p14_title">UMKM Naik Kelas — Website Fashion Terintegrasi</div>
-          <p class="port-desc" data-i18n="p14_desc">Website fashion modern terintegrasi Tokopedia, Shopee, Lazada, dan Bukalapak, lengkap dengan notifikasi order via WhatsApp.</p>
+          <div class="port-badge">Website Fashion</div>
+          <div class="port-title">UMKM Naik Kelas — Website Fashion Terintegrasi</div>
+          <p class="port-desc">Website fashion modern terintegrasi Tokopedia, Shopee, Lazada, dan Bukalapak, lengkap dengan notifikasi order via WhatsApp.</p>
           <div class="port-tech">
             <span class="ttag">WordPress</span>
             <span class="ttag">Marketplace Integration</span>
@@ -1533,9 +1462,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/landing-page.jpg" alt="Landing Page Profesional — Lead Generation" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p15_badge">Landing Page</div>
-          <div class="port-title" data-i18n="p15_title">Landing Page Profesional — Kontraktor & Konstruksi</div>
-          <p class="port-desc" data-i18n="p15_desc">Landing page dengan lead form dan CTA WhatsApp, dirancang khusus untuk mengubah pengunjung menjadi calon pelanggan.</p>
+          <div class="port-badge">Landing Page</div>
+          <div class="port-title">Landing Page Profesional — Kontraktor & Konstruksi</div>
+          <p class="port-desc">Landing page dengan lead form dan CTA WhatsApp, dirancang khusus untuk mengubah pengunjung menjadi calon pelanggan.</p>
           <div class="port-tech">
             <span class="ttag">Lead Form</span>
             <span class="ttag">WhatsApp CTA</span>
@@ -1550,9 +1479,9 @@ footer p { font-size: 0.82rem; color: var(--muted); }
           <img src="img/nusa-kreatif.jpg" alt="Nusa Kreatif — Company Profile Solusi Digital UMKM" loading="lazy">
         </div>
         <div class="port-body">
-          <div class="port-badge" data-i18n="p16_badge">Company Profile</div>
-          <div class="port-title" data-i18n="p16_title">Nusa Kreatif — Company Profile Solusi Digital UMKM</div>
-          <p class="port-desc" data-i18n="p16_desc">Website company profile untuk jasa digitalisasi UMKM berbasis Google Workspace, lengkap dengan showcase layanan dan statistik klien.</p>
+          <div class="port-badge">Company Profile</div>
+          <div class="port-title">Nusa Kreatif — Company Profile Solusi Digital UMKM</div>
+          <p class="port-desc">Website company profile untuk jasa digitalisasi UMKM berbasis Google Workspace, lengkap dengan showcase layanan dan statistik klien.</p>
           <div class="port-tech">
             <span class="ttag">Responsive Design</span>
             <span class="ttag">SEO Friendly</span>
@@ -1568,37 +1497,37 @@ footer p { font-size: 0.82rem; color: var(--muted); }
 <!-- PORTFOLIO SLIDER -->
 <section class="section section-alt" id="gallery">
   <div class="container">
-    <div class="sec-eyebrow fade-up" data-i18n="gal_eyebrow">Galeri</div>
-    <div class="sec-title fade-up" data-i18n="gal_title">Cuplikan Visual Proyek</div>
-    <p class="sec-sub fade-up" data-i18n="gal_sub">Geser untuk melihat tampilan lengkap dari berbagai sistem yang telah dibangun.</p>
+    <div class="sec-eyebrow fade-up">Galeri</div>
+    <div class="sec-title fade-up">Cuplikan Visual Proyek</div>
+    <p class="sec-sub fade-up">Geser untuk melihat tampilan lengkap dari berbagai sistem yang telah dibangun.</p>
   </div>
 
   <div class="slider-wrap fade-up">
-    <button class="slider-arrow slider-prev" onclick="slideMove(-1)" aria-label="Sebelumnya" data-i18n-attr="aria-label:gal_prev">
+    <button class="slider-arrow slider-prev" onclick="slideMove(-1)" aria-label="Sebelumnya">
       <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>
     </button>
 
     <div class="slider-track" id="sliderTrack">
-      <div class="slide-item"><img src="img/perizinan-detail.jpg" alt="Wildlife Rescue Unit detail" loading="lazy"><div class="slide-cap" data-i18n="g1_cap">Wildlife Rescue Unit — Detail Pengajuan</div></div>
-      <div class="slide-item"><img src="img/perizinan-online.jpg" alt="Sistem Perizinan Online" loading="lazy"><div class="slide-cap" data-i18n="g2_cap">Sistem Perizinan Online</div></div>
-      <div class="slide-item"><img src="img/approval-digital.jpg" alt="Sistem Pengajuan & Approval Digital" loading="lazy"><div class="slide-cap" data-i18n="g3_cap">Sistem Pengajuan & Approval Digital</div></div>
-      <div class="slide-item"><img src="img/salespro.jpg" alt="SalesPro Dashboard" loading="lazy"><div class="slide-cap" data-i18n="g4_cap">SalesPro — Dashboard Penjualan</div></div>
-      <div class="slide-item"><img src="img/survey-feedback.jpg" alt="Survey & Feedback System" loading="lazy"><div class="slide-cap" data-i18n="g5_cap">Survey & Feedback System</div></div>
-      <div class="slide-item"><img src="img/executive-dashboard.jpg" alt="Executive Monitoring Dashboard" loading="lazy"><div class="slide-cap" data-i18n="g6_cap">Executive Monitoring Dashboard</div></div>
-      <div class="slide-item"><img src="img/inventaris.jpg" alt="Sistem Inventaris & Stok Barang" loading="lazy"><div class="slide-cap" data-i18n="g7_cap">Sistem Inventaris & Stok Barang</div></div>
-      <div class="slide-item"><img src="img/sheets-to-webapp.jpg" alt="Google Sheets ke Web App" loading="lazy"><div class="slide-cap" data-i18n="g8_cap">Google Sheets → Web App Profesional</div></div>
-      <div class="slide-item"><img src="img/sistem-informasi-dashboard.jpg" alt="Sistem Informasi & Dashboard Bisnis" loading="lazy"><div class="slide-cap" data-i18n="g9_cap">Sistem Informasi & Dashboard Bisnis</div></div>
-      <div class="slide-item"><img src="img/excel-webapp-1.jpg" alt="Excel ke Web App" loading="lazy"><div class="slide-cap" data-i18n="g10_cap">Excel → Web App UMKM</div></div>
-      <div class="slide-item"><img src="img/excel-webapp-2.jpg" alt="Excel ke Web App Profesional" loading="lazy"><div class="slide-cap" data-i18n="g11_cap">Excel → Web App Profesional</div></div>
-      <div class="slide-item"><img src="img/company-profile.jpg" alt="Website Company Profile" loading="lazy"><div class="slide-cap" data-i18n="g12_cap">Website Company Profile</div></div>
-      <div class="slide-item"><img src="img/restoran-kuliner.jpg" alt="Website Restoran & Kuliner" loading="lazy"><div class="slide-cap" data-i18n="g13_cap">Website Restoran & Kuliner</div></div>
-      <div class="slide-item"><img src="img/toko-online.jpg" alt="Toko Online Profesional" loading="lazy"><div class="slide-cap" data-i18n="g14_cap">Toko Online Profesional</div></div>
-      <div class="slide-item"><img src="img/umkm-naik-kelas.jpg" alt="UMKM Naik Kelas" loading="lazy"><div class="slide-cap" data-i18n="g15_cap">UMKM Naik Kelas — Website Fashion</div></div>
-      <div class="slide-item"><img src="img/landing-page.jpg" alt="Landing Page Profesional" loading="lazy"><div class="slide-cap" data-i18n="g16_cap">Landing Page Profesional</div></div>
-      <div class="slide-item"><img src="img/nusa-kreatif.jpg" alt="Nusa Kreatif Company Profile" loading="lazy"><div class="slide-cap" data-i18n="g17_cap">Nusa Kreatif — Company Profile</div></div>
+      <div class="slide-item"><img src="img/perizinan-detail.jpg" alt="Wildlife Rescue Unit detail" loading="lazy"><div class="slide-cap">Wildlife Rescue Unit — Detail Pengajuan</div></div>
+      <div class="slide-item"><img src="img/perizinan-online.jpg" alt="Sistem Perizinan Online" loading="lazy"><div class="slide-cap">Sistem Perizinan Online</div></div>
+      <div class="slide-item"><img src="img/approval-digital.jpg" alt="Sistem Pengajuan & Approval Digital" loading="lazy"><div class="slide-cap">Sistem Pengajuan & Approval Digital</div></div>
+      <div class="slide-item"><img src="img/salespro.jpg" alt="SalesPro Dashboard" loading="lazy"><div class="slide-cap">SalesPro — Dashboard Penjualan</div></div>
+      <div class="slide-item"><img src="img/survey-feedback.jpg" alt="Survey & Feedback System" loading="lazy"><div class="slide-cap">Survey & Feedback System</div></div>
+      <div class="slide-item"><img src="img/executive-dashboard.jpg" alt="Executive Monitoring Dashboard" loading="lazy"><div class="slide-cap">Executive Monitoring Dashboard</div></div>
+      <div class="slide-item"><img src="img/inventaris.jpg" alt="Sistem Inventaris & Stok Barang" loading="lazy"><div class="slide-cap">Sistem Inventaris & Stok Barang</div></div>
+      <div class="slide-item"><img src="img/sheets-to-webapp.jpg" alt="Google Sheets ke Web App" loading="lazy"><div class="slide-cap">Google Sheets → Web App Profesional</div></div>
+      <div class="slide-item"><img src="img/sistem-informasi-dashboard.jpg" alt="Sistem Informasi & Dashboard Bisnis" loading="lazy"><div class="slide-cap">Sistem Informasi & Dashboard Bisnis</div></div>
+      <div class="slide-item"><img src="img/excel-webapp-1.jpg" alt="Excel ke Web App" loading="lazy"><div class="slide-cap">Excel → Web App UMKM</div></div>
+      <div class="slide-item"><img src="img/excel-webapp-2.jpg" alt="Excel ke Web App Profesional" loading="lazy"><div class="slide-cap">Excel → Web App Profesional</div></div>
+      <div class="slide-item"><img src="img/company-profile.jpg" alt="Website Company Profile" loading="lazy"><div class="slide-cap">Website Company Profile</div></div>
+      <div class="slide-item"><img src="img/restoran-kuliner.jpg" alt="Website Restoran & Kuliner" loading="lazy"><div class="slide-cap">Website Restoran & Kuliner</div></div>
+      <div class="slide-item"><img src="img/toko-online.jpg" alt="Toko Online Profesional" loading="lazy"><div class="slide-cap">Toko Online Profesional</div></div>
+      <div class="slide-item"><img src="img/umkm-naik-kelas.jpg" alt="UMKM Naik Kelas" loading="lazy"><div class="slide-cap">UMKM Naik Kelas — Website Fashion</div></div>
+      <div class="slide-item"><img src="img/landing-page.jpg" alt="Landing Page Profesional" loading="lazy"><div class="slide-cap">Landing Page Profesional</div></div>
+      <div class="slide-item"><img src="img/nusa-kreatif.jpg" alt="Nusa Kreatif Company Profile" loading="lazy"><div class="slide-cap">Nusa Kreatif — Company Profile</div></div>
     </div>
 
-    <button class="slider-arrow slider-next" onclick="slideMove(1)" aria-label="Berikutnya" data-i18n-attr="aria-label:gal_next">
+    <button class="slider-arrow slider-next" onclick="slideMove(1)" aria-label="Berikutnya">
       <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
     </button>
   </div>
@@ -1609,14 +1538,14 @@ footer p { font-size: 0.82rem; color: var(--muted); }
 <!-- ROADMAP / PROCESS -->
 <section class="section section-alt" id="process">
   <div class="container">
-    <div class="sec-eyebrow fade-up" data-i18n="proc_eyebrow">Cara Kerja</div>
-    <div class="sec-title fade-up" data-i18n="proc_title">Roadmap & Alur Order</div>
-    <p class="sec-sub fade-up" data-i18n="proc_sub">Transparan dari konsultasi hingga finalisasi. Anda selalu tahu ada di tahap mana.</p>
+    <div class="sec-eyebrow fade-up">Cara Kerja</div>
+    <div class="sec-title fade-up">Roadmap & Alur Order</div>
+    <p class="sec-sub fade-up">Transparan dari konsultasi hingga finalisasi. Anda selalu tahu ada di tahap mana.</p>
 
     <div style="margin-top: 2.5rem;" class="fade-up">
       <div class="road-tabs">
-        <button class="rtab active" onclick="switchTab('flow')" data-i18n="proc_tab1">Alur Pengerjaan</button>
-        <button class="rtab" onclick="switchTab('payment')" data-i18n="proc_tab2">Alur Pembayaran</button>
+        <button class="rtab active" onclick="switchTab('flow')">Alur Pengerjaan</button>
+        <button class="rtab" onclick="switchTab('payment')">Alur Pembayaran</button>
       </div>
 
       <!-- FLOW ORDER -->
@@ -1627,63 +1556,63 @@ footer p { font-size: 0.82rem; color: var(--muted); }
               <div class="flow-step-num">1</div>
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
             </div>
-            <div class="flow-label" data-i18n="f1_label">Konsultasi Gratis</div>
-            <div class="flow-sub" data-i18n="f1_sub">Diskusi kebutuhan via WhatsApp. Tidak ada biaya.</div>
+            <div class="flow-label">Konsultasi Gratis</div>
+            <div class="flow-sub">Diskusi kebutuhan via WhatsApp. Tidak ada biaya.</div>
           </div>
           <div class="flow-step done">
             <div class="flow-circle">
               <div class="flow-step-num">2</div>
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
             </div>
-            <div class="flow-label" data-i18n="f2_label">Analisis & Penawaran</div>
-            <div class="flow-sub" data-i18n="f2_sub">Proposal detail + estimasi harga dikirim dalam 1×24 jam.</div>
+            <div class="flow-label">Analisis & Penawaran</div>
+            <div class="flow-sub">Proposal detail + estimasi harga dikirim dalam 1×24 jam.</div>
           </div>
           <div class="flow-step">
             <div class="flow-circle">
               <div class="flow-step-num">3</div>
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
             </div>
-            <div class="flow-label" data-i18n="f3_label">Pengembangan</div>
-            <div class="flow-sub" data-i18n="f3_sub">Coding & building sistem sesuai spesifikasi yang disepakati.</div>
+            <div class="flow-label">Pengembangan</div>
+            <div class="flow-sub">Coding & building sistem sesuai spesifikasi yang disepakati.</div>
           </div>
           <div class="flow-step">
             <div class="flow-circle">
               <div class="flow-step-num">4</div>
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
-            <div class="flow-label" data-i18n="f4_label">Review & Revisi</div>
-            <div class="flow-sub" data-i18n="f4_sub">Demo sistem, feedback klien, dan revisi hingga sesuai kebutuhan.</div>
+            <div class="flow-label">Review & Revisi</div>
+            <div class="flow-sub">Demo sistem, feedback klien, dan revisi hingga sesuai kebutuhan.</div>
           </div>
           <div class="flow-step">
             <div class="flow-circle">
               <div class="flow-step-num">5</div>
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
             </div>
-            <div class="flow-label" data-i18n="f5_label">Serah Terima & Support</div>
-            <div class="flow-sub" data-i18n="f5_sub">Sistem aktif, training pengguna, dan garansi pasca-selesai.</div>
+            <div class="flow-label">Serah Terima & Support</div>
+            <div class="flow-sub">Sistem aktif, training pengguna, dan garansi pasca-selesai.</div>
           </div>
         </div>
 
         <div style="margin-top: 2.5rem; display: grid; grid-template-columns: repeat(5,1fr); gap: 1rem;" class="flow-detail-grid">
           <div style="padding: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; font-size: 0.78rem; color: var(--muted); line-height: 1.6;">
-            <div style="font-weight: 700; color: var(--text); margin-bottom: 0.35rem;" data-i18n="fd1_h">Hari ke-0</div>
-            <span data-i18n="fd1_t">Chat & ceritakan kebutuhan. Konsultasi 100% gratis & tanpa komitmen.</span>
+            <div style="font-weight: 700; color: var(--text); margin-bottom: 0.35rem;">Hari ke-0</div>
+            Chat & ceritakan kebutuhan. Konsultasi 100% gratis & tanpa komitmen.
           </div>
           <div style="padding: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; font-size: 0.78rem; color: var(--muted); line-height: 1.6;">
-            <div style="font-weight: 700; color: var(--text); margin-bottom: 0.35rem;" data-i18n="fd2_h">Hari ke-1</div>
-            <span data-i18n="fd2_t">Proposal dikirim via WhatsApp atau email. Harga fixed, tidak ada biaya tambahan.</span>
+            <div style="font-weight: 700; color: var(--text); margin-bottom: 0.35rem;">Hari ke-1</div>
+            Proposal dikirim via WhatsApp atau email. Harga fixed, tidak ada biaya tambahan.
           </div>
           <div style="padding: 1rem; background: var(--accent-light); border: 1px solid var(--accent-mid); border-radius: 10px; font-size: 0.78rem; color: var(--text2); line-height: 1.6;">
-            <div style="font-weight: 700; color: var(--accent); margin-bottom: 0.35rem;" data-i18n="fd3_h">Hari ke-2 s/d selesai</div>
-            <span data-i18n="fd3_t">Progress pengerjaan dibagikan secara berkala. Anda bisa pantau kapan saja.</span>
+            <div style="font-weight: 700; color: var(--accent); margin-bottom: 0.35rem;">Hari ke-2 s/d selesai</div>
+            Progress pengerjaan dibagikan secara berkala. Anda bisa pantau kapan saja.
           </div>
           <div style="padding: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; font-size: 0.78rem; color: var(--muted); line-height: 1.6;">
-            <div style="font-weight: 700; color: var(--text); margin-bottom: 0.35rem;" data-i18n="fd4_h">Sebelum finalisasi</div>
-            <span data-i18n="fd4_t">Demo live sistem. Revisi ditampung dan dikerjakan sebelum pelunasan.</span>
+            <div style="font-weight: 700; color: var(--text); margin-bottom: 0.35rem;">Sebelum finalisasi</div>
+            Demo live sistem. Revisi ditampung dan dikerjakan sebelum pelunasan.
           </div>
           <div style="padding: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; font-size: 0.78rem; color: var(--muted); line-height: 1.6;">
-            <div style="font-weight: 700; color: var(--text); margin-bottom: 0.35rem;" data-i18n="fd5_h">Pasca-selesai</div>
-            <span data-i18n="fd5_t">Training + garansi bug fix 14–30 hari (tergantung paket).</span>
+            <div style="font-weight: 700; color: var(--text); margin-bottom: 0.35rem;">Pasca-selesai</div>
+            Training + garansi bug fix 14–30 hari (tergantung paket).
           </div>
         </div>
       </div>
@@ -1692,47 +1621,47 @@ footer p { font-size: 0.82rem; color: var(--muted); }
       <div class="road-content" id="tab-payment">
         <div class="pay-flow">
           <div class="pay-step">
-            <div class="pay-num" data-i18n="pay1_num">Langkah 1</div>
+            <div class="pay-num">Langkah 1</div>
             <div class="pay-icon">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
             </div>
-            <div class="pay-label" data-i18n="pay1_label">Konsultasi & Sepakat</div>
-            <p class="pay-desc" data-i18n="pay1_desc">Diskusi kebutuhan, review proposal, dan setuju dengan scope pekerjaan.</p>
+            <div class="pay-label">Konsultasi & Sepakat</div>
+            <p class="pay-desc">Diskusi kebutuhan, review proposal, dan setuju dengan scope pekerjaan.</p>
           </div>
 
           <div class="pay-step highlight">
-            <div class="pay-num" data-i18n="pay2_num">Langkah 2</div>
+            <div class="pay-num">Langkah 2</div>
             <div class="pay-icon">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
             </div>
-            <div class="pay-label" data-i18n="pay2_label">Bayar DP 50%</div>
-            <p class="pay-desc" data-i18n="pay2_desc">Uang muka 50% dari total biaya sebagai tanda jadi. Pengerjaan dimulai setelah DP diterima.</p>
-            <div class="pay-amount" data-i18n="pay2_amount">50% di awal</div>
+            <div class="pay-label">Bayar DP 50%</div>
+            <p class="pay-desc">Uang muka 50% dari total biaya sebagai tanda jadi. Pengerjaan dimulai setelah DP diterima.</p>
+            <div class="pay-amount">50% di awal</div>
           </div>
 
           <div class="pay-step">
-            <div class="pay-num" data-i18n="pay3_num">Langkah 3</div>
+            <div class="pay-num">Langkah 3</div>
             <div class="pay-icon">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </div>
-            <div class="pay-label" data-i18n="pay3_label">Demo & Revisi</div>
-            <p class="pay-desc" data-i18n="pay3_desc">Sistem 90% jadi. Demo live dilakukan. Revisi sesuai feedback sebelum finalisasi.</p>
+            <div class="pay-label">Demo & Revisi</div>
+            <p class="pay-desc">Sistem 90% jadi. Demo live dilakukan. Revisi sesuai feedback sebelum finalisasi.</p>
           </div>
 
           <div class="pay-step highlight">
-            <div class="pay-num" data-i18n="pay4_num">Langkah 4</div>
+            <div class="pay-num">Langkah 4</div>
             <div class="pay-icon">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
             </div>
-            <div class="pay-label" data-i18n="pay4_label">Pelunasan & Serah Terima</div>
-            <p class="pay-desc" data-i18n="pay4_desc">Setelah revisi selesai dan klien puas, sisa pembayaran 50% dilunasi. Akses penuh sistem diberikan.</p>
-            <div class="pay-amount" data-i18n="pay4_amount">50% pelunasan</div>
+            <div class="pay-label">Pelunasan & Serah Terima</div>
+            <p class="pay-desc">Setelah revisi selesai dan klien puas, sisa pembayaran 50% dilunasi. Akses penuh sistem diberikan.</p>
+            <div class="pay-amount">50% pelunasan</div>
           </div>
         </div>
 
         <div style="margin-top: 2rem; padding: 1.25rem 1.5rem; background: var(--accent-light); border: 1.5px solid var(--accent-mid); border-radius: 12px; display: flex; align-items: flex-start; gap: 1rem;">
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#2563EB" stroke-width="2" style="flex-shrink:0;margin-top:2px"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <div style="font-size: 0.83rem; color: var(--text2); line-height: 1.7;" data-i18n="pay_note">
+          <div style="font-size: 0.83rem; color: var(--text2); line-height: 1.7;">
             <strong style="color: var(--accent);">Metode pembayaran:</strong> Transfer Bank (BCA / BRI / Mandiri / BSI) atau GoPay / OVO / DANA. 
             Bukti transfer dikirim via WhatsApp. Invoice & kwitansi resmi disediakan. 
             <strong style="color: var(--text);">Tidak ada biaya tersembunyi</strong> — harga sudah final sesuai proposal.
@@ -2049,7 +1978,7 @@ footer p { font-size: 0.82rem; color: var(--muted); }
 </section>
 
 <footer>
-  <p>© 2026 <strong>Rio Putra Adi Nugroho</strong> · Bandung, Indonesia</p>
+  <p>© 2026 <strong> Rio Putra Adi Nugroho</strong> · Bandung, Indonesia ·</p>
 </footer>
 
 <script>
